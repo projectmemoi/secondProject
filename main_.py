@@ -1,11 +1,11 @@
 from tkinter import *
+from  filleFunction import *
 tkinter=Tk()
 
 
 BG='gray80'
 FONT_TITLE=('locuda console', 22, 'bold')
 FONT=('locuda console', 22)
-
 
 
 labelTitle=Label(tkinter, text='Operation App', bg=BG, font=FONT_TITLE)
@@ -30,17 +30,28 @@ entryY.place(x=150, y=160, relwidth=0.66, relheight=0.09)
 entryResult=Entry(tkinter)
 entryResult.place(x=150, y=260, relwidth=0.66, relheight=0.09)
 
-buttonAdd=Button(tkinter, text='+', font=FONT)
+def addActionBut():
+    addition(entryX.get(),entryY.get())
+
+buttonAdd=Button(tkinter, text='+', font=FONT,command=addActionBut)
 buttonAdd.place(x=150, y=360, relwidth=0.11, relheight=0.1)
 
-buttonSub=Button(tkinter, text='-', font=FONT)
+
+def subActionBut():
+    subtraction(entryX.get(),entryY.get())
+buttonSub=Button(tkinter, text='-', font=FONT,command=subActionBut)
 buttonSub.place(x=242, y=360, relwidth=0.11, relheight=0.1)
 
-buttonMul=Button(tkinter, text='x', font=FONT)
+def mulActionBut():
+    multiplication(entryX.get(),entryY.get())
+buttonMul=Button(tkinter, text='x', font=FONT,command=mulActionBut)
 buttonMul.place(x=334, y=360, relwidth=0.11, relheight=0.1)
 
-buttonDiv=Button(tkinter, text='/', font=FONT)
+def divActionBut():
+    division(entryX.get(),entryY.get())
+buttonDiv=Button(tkinter, text='/', font=FONT,command=divActionBut)
 buttonDiv.place(x=428, y=360, relwidth=0.11, relheight=0.1)
+
 
 
 tkinter.config(bg=BG)

@@ -1,13 +1,15 @@
-
+def    add():
+    print("hello world")
 
 def addition(x, y):
+
     return int(x)+int(y)
 
 def subtraction(x, y):
     return int(x)-int(y)
 
-def multiplication():
-    return 0
+def multiplication(x, y):
+    return x*y
 
 def division(x, y):
     return int(x)/int(y)
