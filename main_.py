@@ -31,24 +31,31 @@ entryResult=Entry(tkinter)
 entryResult.place(x=150, y=260, relwidth=0.66, relheight=0.09)
 
 def addActionBut():
-    addition(entryX.get(),entryY.get())
-
+    if (entryResult.get!=''):
+        entryResult.delete(0, END)
+    entryResult.insert(0,addition(entryX.get(),entryY.get()))
 buttonAdd=Button(tkinter, text='+', font=FONT,command=addActionBut)
 buttonAdd.place(x=150, y=360, relwidth=0.11, relheight=0.1)
 
 
 def subActionBut():
-    subtraction(entryX.get(),entryY.get())
+    if (entryResult.get != ''):
+        entryResult.delete(0, END)
+    entryResult.insert(0,subtraction(entryX.get(),entryY.get()))
 buttonSub=Button(tkinter, text='-', font=FONT,command=subActionBut)
 buttonSub.place(x=242, y=360, relwidth=0.11, relheight=0.1)
 
 def mulActionBut():
-    multiplication(entryX.get(),entryY.get())
+    if (entryResult.get != ''):
+        entryResult.delete(0, END)
+    entryResult.insert(0,multiplication(entryX.get(),entryY.get()))
 buttonMul=Button(tkinter, text='x', font=FONT,command=mulActionBut)
 buttonMul.place(x=334, y=360, relwidth=0.11, relheight=0.1)
 
 def divActionBut():
-    division(entryX.get(),entryY.get())
+    if (entryResult.get != ''):
+        entryResult.delete(0, END)
+    entryResult.insert(0,division(entryX.get(),entryY.get()))
 buttonDiv=Button(tkinter, text='/', font=FONT,command=divActionBut)
 buttonDiv.place(x=428, y=360, relwidth=0.11, relheight=0.1)
 
